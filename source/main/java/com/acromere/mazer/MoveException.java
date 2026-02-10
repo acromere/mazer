@@ -1,4 +1,4 @@
-package com.avereon.mazer;
+package com.acromere.mazer;
 
 public class MoveException extends Exception {
 

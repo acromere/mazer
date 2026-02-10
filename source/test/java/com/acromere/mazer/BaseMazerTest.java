@@ -1,4 +1,4 @@
-package com.avereon.mazer;
+package com.acromere.mazer;
 
 public abstract class BaseMazerTest {
 

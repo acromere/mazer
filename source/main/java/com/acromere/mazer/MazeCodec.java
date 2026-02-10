@@ -1,9 +1,9 @@
-package com.avereon.mazer;
+package com.acromere.mazer;
 
-import com.avereon.product.Product;
-import com.avereon.product.Rb;
-import com.avereon.xenon.resource.Resource;
-import com.avereon.xenon.resource.Codec;
+import com.acromere.product.Product;
+import com.acromere.product.Rb;
+import com.acromere.xenon.resource.Resource;
+import com.acromere.xenon.resource.Codec;
 import lombok.CustomLog;
 
 import java.io.*;
@@ -12,7 +12,7 @@ import java.nio.charset.StandardCharsets;
 @CustomLog
 public class MazeCodec extends Codec {
 
-	static final String MEDIA_TYPE = "application/vnd.avereon.mazer.maze";
+	static final String MEDIA_TYPE = "application/vnd.acromere.mazer.maze";
 
 	private Product product;
 

@@ -1,9 +1,9 @@
-package com.avereon.mazer;
+package com.acromere.mazer;
 
-import com.avereon.product.Product;
-import com.avereon.xenon.Xenon;
-import com.avereon.xenon.ProgramTask;
-import com.avereon.zerra.javafx.Fx;
+import com.acromere.product.Product;
+import com.acromere.xenon.Xenon;
+import com.acromere.xenon.ProgramTask;
+import com.acromere.zerra.javafx.Fx;
 
 public abstract class MazeSolver extends ProgramTask<Void> {
 

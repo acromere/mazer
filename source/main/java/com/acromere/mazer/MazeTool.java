@@ -1,20 +1,20 @@
-package com.avereon.mazer;
+package com.acromere.mazer;
 
-import com.avereon.data.NodeEvent;
-import com.avereon.event.EventHandler;
-import com.avereon.product.Rb;
-import com.avereon.skill.RunPauseResettable;
-import com.avereon.xenon.RbKey;
-import com.avereon.xenon.ProgramTool;
-import com.avereon.xenon.UiFactory;
-import com.avereon.xenon.XenonProgramProduct;
-import com.avereon.xenon.action.common.ResetAction;
-import com.avereon.xenon.action.common.RunPauseAction;
-import com.avereon.xenon.resource.Resource;
-import com.avereon.xenon.resource.OpenAssetRequest;
-import com.avereon.xenon.resource.ResourceManager;
-import com.avereon.zerra.javafx.Fx;
-import com.avereon.zerra.javafx.FxUtil;
+import com.acromere.data.NodeEvent;
+import com.acromere.event.EventHandler;
+import com.acromere.product.Rb;
+import com.acromere.skill.RunPauseResettable;
+import com.acromere.xenon.RbKey;
+import com.acromere.xenon.ProgramTool;
+import com.acromere.xenon.UiFactory;
+import com.acromere.xenon.XenonProgramProduct;
+import com.acromere.xenon.action.common.ResetAction;
+import com.acromere.xenon.action.common.RunPauseAction;
+import com.acromere.xenon.resource.Resource;
+import com.acromere.xenon.resource.OpenAssetRequest;
+import com.acromere.xenon.resource.ResourceManager;
+import com.acromere.zerra.javafx.Fx;
+import com.acromere.zerra.javafx.FxUtil;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.geometry.Insets;
@@ -35,7 +35,7 @@ import java.util.Map;
  * The maze tool edit a maze and runs a maze solver for the maze.
  * <p>
  * This tool is part of an example mod for
- * <a href="https://www.avereon.com/product/xenon">Xenon</a>. The tool
+ * <a href="https://www.acromere.com/product/xenon">Xenon</a>. The tool
  * demonstrates various capabilities and practices common to Xenon tools.
  * </p>
  */
@@ -94,8 +94,8 @@ public class MazeTool extends ProgramTool implements RunPauseResettable {
 		super( product, resource );
 		this.zoom = new SimpleIntegerProperty( DEFAULT_ZOOM );
 
-		resetAction = new com.avereon.xenon.action.common.ResetAction( product.getProgram(), this );
-		runAction = new com.avereon.xenon.action.common.RunPauseAction( product.getProgram(), this );
+		resetAction = new com.acromere.xenon.action.common.ResetAction( product.getProgram(), this );
+		runAction = new com.acromere.xenon.action.common.RunPauseAction( product.getProgram(), this );
 
 		mazeWidth = new TextField( String.valueOf( Maze.DEFAULT_WIDTH ) );
 		mazeWidth.setOnAction( e -> getMaze().setSize( Integer.parseInt( mazeWidth.getText() ), getMaze().getHeight() ) );

@@ -1,6 +1,6 @@
-package com.avereon.mazer;
+package com.acromere.mazer;
 
-import com.avereon.xenon.resource.Resource;
+import com.acromere.xenon.resource.Resource;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

@@ -1,13 +1,13 @@
-package com.avereon.mazer;
+package com.acromere.mazer;
 
-import com.avereon.product.Rb;
-import com.avereon.xenon.Module;
-import com.avereon.xenon.ToolRegistration;
+import com.acromere.product.Rb;
+import com.acromere.xenon.Module;
+import com.acromere.xenon.ToolRegistration;
 import lombok.CustomLog;
 
 /**
  * The Mazer mod. This mod is part of an example mod for
- * <a href="https://www.avereon.com/product/xenon">Xenon</a>. The mod
+ * <a href="https://www.acromere.com/product/xenon">Xenon</a>. The mod
  * demonstrates various capabilities and practices common to Xenon mods.
  */
 @CustomLog

@@ -1,10 +1,10 @@
-package com.avereon.mazer;
+package com.acromere.mazer;
 
-import com.avereon.product.Product;
-import com.avereon.product.Rb;
-import com.avereon.util.ThreadUtil;
-import com.avereon.xenon.RbKey;
-import com.avereon.xenon.Xenon;
+import com.acromere.product.Product;
+import com.acromere.product.Rb;
+import com.acromere.util.ThreadUtil;
+import com.acromere.xenon.RbKey;
+import com.acromere.xenon.Xenon;
 import lombok.CustomLog;
 
 import java.util.Random;

@@ -1,6 +1,6 @@
-package com.avereon.mazer;
+package com.acromere.mazer;
 
-import com.avereon.zerra.image.RenderedIcon;
+import com.acromere.zerra.image.RenderedIcon;
 import javafx.geometry.Point2D;
 import javafx.scene.paint.Color;
 
