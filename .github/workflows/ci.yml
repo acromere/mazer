@@ -1,4 +1,4 @@
-name: Acromere Mazer CI
+name: Mazer CI
 
 on:
   push:
