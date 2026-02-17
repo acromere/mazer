@@ -16,11 +16,11 @@ import java.util.Set;
  */
 public class MazerIcon extends RenderedIcon {
 
-	private double mouthAngle = 30;
+	private static final Random RANDOM = new Random( 8 );
 
-	private Random RANDOM = new Random( 8 );
+	private static final double mouthAngle = 30;
 
-	private Set<Point2D> points = new HashSet<>();
+	private final Set<Point2D> points = new HashSet<>();
 
 	public MazerIcon() {
 		int chips = 30;
@@ -52,7 +52,7 @@ public class MazerIcon extends RenderedIcon {
 		fill( Color.SADDLEBROWN.darker() );
 	}
 
-	public static void main( String[] args ) {
+	static void main( String[] args ) {
 		//save( new MazerIcon(), "target/icons/mazer.png" );
 		proof( new MazerIcon() );
 	}

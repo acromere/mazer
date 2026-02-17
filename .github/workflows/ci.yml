@@ -96,11 +96,11 @@ jobs:
           if [ $? -ne 0 ]; then exit 1; fi
           scp -B target/*product.jar ${{env.ACM_XENON_REPO_USERNAME}}@acromere.com:${PRODUCT_DEPLOY_PATH} 2>&1
 
-      - name: Deploy Product Icon
+      - name: Deploy Product Icons
         run: |
           ssh -t ${{env.ACM_XENON_REPO_USERNAME}}@acromere.com "mkdir -p ${{env.PRODUCT_DEPLOY_PATH}};"
           if [ $? -ne 0 ]; then exit 1; fi
-          scp -B target/main/images/*product.png ${{env.ACM_XENON_REPO_USERNAME}}@acromere.com:${PRODUCT_DEPLOY_PATH} 2>&1
+          scp -B target/main/images/product*.png ${{env.ACM_XENON_REPO_USERNAME}}@acromere.com:${PRODUCT_DEPLOY_PATH} 2>&1
 
       - name: Deploy Product Card
         run: |
