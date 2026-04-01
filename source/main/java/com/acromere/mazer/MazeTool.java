@@ -6,7 +6,7 @@ import com.acromere.product.Rb;
 import com.acromere.skill.RunPauseResettable;
 import com.acromere.xenon.RbKey;
 import com.acromere.xenon.ProgramTool;
-import com.acromere.xenon.UiFactory;
+import com.acromere.xenon.Ui;
 import com.acromere.xenon.XenonProgramProduct;
 import com.acromere.xenon.action.common.ResetAction;
 import com.acromere.xenon.action.common.RunPauseAction;
@@ -118,10 +118,10 @@ public class MazeTool extends ProgramTool implements RunPauseResettable {
 
 		HBox hbox = new HBox( new Label( "Width: " ), mazeWidth, new Label( "Height: " ), mazeHeight, new Label( "Speed:" ), solverSpeed, chooser );
 		hbox.setAlignment( Pos.BASELINE_LEFT );
-		hbox.setSpacing( UiFactory.PAD );
+		hbox.setSpacing( Ui.PAD );
 
 		BorderPane pane = new BorderPane( grid, hbox, null, steps, null );
-		pane.setBorder( new Border( new BorderStroke( Color.TRANSPARENT, BorderStrokeStyle.NONE, CornerRadii.EMPTY, new BorderWidths( UiFactory.PAD ) ) ) );
+		pane.setBorder( new Border( new BorderStroke( Color.TRANSPARENT, BorderStrokeStyle.NONE, CornerRadii.EMPTY, new BorderWidths( Ui.PAD ) ) ) );
 
 		getChildren().addAll( pane );
 
