@@ -82,13 +82,14 @@ public class MazeTool extends ProgramTool implements RunPauseResettable {
 	 * Create a maze tool.
 	 * <p>
 	 * The constructor of any tool requires the product associated with this tool,
-	 * the Mazer mod in this case, as well as the asset this tool will be working
-	 * on. This tool should have been registered to only work on MazeAssetType
-	 * assets so that the asset provided to the tool will be a maze asset.
+	 * the Mazer mod in this case, as well as the resource this tool will be
+	 * working on. This tool should have been registered to only work on
+	 * MazeResoureType resources so that the resource provided to the tool will be a maze
+	 * resource.
 	 * </p>
 	 *
 	 * @param product The product associated with the tool
-	 * @param resource The asset the tool will work on
+	 * @param resource The resource the tool will work on
 	 */
 	public MazeTool( XenonProgramProduct product, Resource resource ) {
 		super( product, resource );
@@ -162,13 +163,13 @@ public class MazeTool extends ProgramTool implements RunPauseResettable {
 	}
 
 	/**
-	 * Called from the {@link ResourceManager AssetManager}
-	 * when the asset is ready for use by the tool. It should not be assumed the
-	 * asset is ready when the tool constructor is called. Logic requiring the
-	 * asset to be ready should be called after this method has been called.
+	 * Called from the {@link ResourceManager}
+	 * when the resource is ready for use by the tool. It should not be assumed the
+	 * resource is ready when the tool constructor is called. Logic requiring the
+	 * resource to be ready should be called after this method has been called.
 	 *
-	 * @param request The OpenAssetRequest that contains information about how the
-	 * asset was requested to be opened.
+	 * @param request The OpenResourceRequest that contains information about how the
+	 * resource was requested to be opened.
 	 */
 	@Override
 	protected void ready( OpenResourceRequest request ) {
@@ -217,14 +218,14 @@ public class MazeTool extends ProgramTool implements RunPauseResettable {
 	}
 
 	private Maze getMaze() {
-		return (Maze)getResource().getModel();
+		return getResource().getModel();
 	}
 
 	/**
-	 * Called any time the asset is refreshed. This is an indicator that the asset
-	 * has changed in some way that the tool needs to be aware of. Note that the
-	 * method is not provided any further information about the reason for the
-	 * refresh.
+	 * Called any time the resource is refreshed. This is an indicator that the
+	 * resource has changed in some way that the tool needs to be aware of. Note
+	 * that the method is not provided any further information about the reason
+	 * for the refresh.
 	 */
 	private void refresh() {
 		Maze maze = getMaze();

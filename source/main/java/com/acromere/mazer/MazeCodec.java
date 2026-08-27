@@ -29,7 +29,7 @@ public class MazeCodec extends Codec {
 
 	@Override
 	public String getName() {
-		return Rb.text( "asset", "codec-maze-name" );
+		return Rb.text( "resource", "codec-maze-name" );
 	}
 
 	@Override

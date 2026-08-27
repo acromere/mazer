@@ -13,11 +13,11 @@ import lombok.CustomLog;
 @CustomLog
 public class Mazer extends Module {
 
-	private final MazeResourceType mazeAssetType;
+	private final MazeResourceType mazeResourceType;
 
 	public Mazer() {
 		Rb.init( this );
-		mazeAssetType = new MazeResourceType( this );
+		mazeResourceType = new MazeResourceType( this );
 	}
 
 	/**
@@ -36,8 +36,8 @@ public class Mazer extends Module {
 		registerAction( this, "reset" );
 		registerAction( this, "runpause" );
 
-		registerAssetType( mazeAssetType );
-		registerTool( mazeAssetType, new ToolRegistration( this, MazeTool.class ) );
+		registerAssetType( mazeResourceType );
+		registerTool( mazeResourceType, new ToolRegistration( this, MazeTool.class ) );
 	}
 
 	/**
@@ -45,8 +45,8 @@ public class Mazer extends Module {
 	 */
 	@Override
 	public void shutdown() {
-		unregisterTool( mazeAssetType, MazeTool.class );
-		unregisterAssetType( mazeAssetType );
+		unregisterTool( mazeResourceType, MazeTool.class );
+		unregisterAssetType( mazeResourceType );
 
 		unregisterAction( "runpause" );
 		unregisterAction( "reset" );

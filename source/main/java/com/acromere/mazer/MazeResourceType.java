@@ -19,12 +19,12 @@ public class MazeResourceType extends ResourceType {
 	}
 
 	@Override
-	public boolean assetNew( Xenon program, Resource resource ) throws ResourceException {
-		return super.assetNew( program, resource );
+	public boolean resourceNew( Xenon program, Resource resource ) throws ResourceException {
+		return super.resourceNew( program, resource );
 	}
 
 	@Override
-	public boolean assetOpen( Xenon program, Resource resource ) throws ResourceException {
+	public boolean resourceOpen( Xenon program, Resource resource ) throws ResourceException {
 		resource.setModel( new Maze() );
 		return true;
 	}
