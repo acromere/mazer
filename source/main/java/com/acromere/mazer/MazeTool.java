@@ -11,7 +11,7 @@ import com.acromere.xenon.XenonProgramProduct;
 import com.acromere.xenon.action.common.ResetAction;
 import com.acromere.xenon.action.common.RunPauseAction;
 import com.acromere.xenon.resource.Resource;
-import com.acromere.xenon.resource.OpenAssetRequest;
+import com.acromere.xenon.resource.OpenResourceRequest;
 import com.acromere.xenon.resource.ResourceManager;
 import com.acromere.zerra.javafx.Fx;
 import com.acromere.zerra.javafx.FxUtil;
@@ -171,7 +171,7 @@ public class MazeTool extends ProgramTool implements RunPauseResettable {
 	 * asset was requested to be opened.
 	 */
 	@Override
-	protected void ready( OpenAssetRequest request ) {
+	protected void ready( OpenResourceRequest request ) {
 		setTitle( getResource().getName() );
 		setGraphic( getProgram().getIconLibrary().getIcon( "mazer" ) );
 
@@ -179,7 +179,7 @@ public class MazeTool extends ProgramTool implements RunPauseResettable {
 	}
 
 	@Override
-	protected void open( OpenAssetRequest request ) {
+	protected void open( OpenResourceRequest request ) {
 		refresh();
 	}
 
