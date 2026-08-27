@@ -38,7 +38,7 @@ public class Mazer extends Module {
 		registerAction( this, "reset" );
 		registerAction( this, "runpause" );
 
-		registerAssetType( mazeResourceType );
+		registerResourceType( mazeResourceType );
 		registerTool( mazeResourceType, new ToolRegistration( this, MazeTool.class ) );
 	}
 
@@ -48,7 +48,7 @@ public class Mazer extends Module {
 	@Override
 	public void shutdown() {
 		unregisterTool( mazeResourceType, MazeTool.class );
-		unregisterAssetType( mazeResourceType );
+		unregisterResourceType( mazeResourceType );
 
 		unregisterAction( "runpause" );
 		unregisterAction( "reset" );
