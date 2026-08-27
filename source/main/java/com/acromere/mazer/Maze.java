@@ -7,11 +7,11 @@ import com.acromere.transaction.TxnException;
 import lombok.CustomLog;
 
 /**
- * The Maze class is the data model used for the Maze asset type, asset and
+ * The Maze class is the data model used for the Maze resource type, resource and
  * tool. It subclasses {@link Node} to utilize the
  * functionality provided in Node that simplifies the management of attributes,
- * data structure and the modified flag. Since all assets are also Nodes, if the
- * asset data model is also a Node then the modified flag is automatically
+ * data structure and the modified flag. Since all resources are also Nodes, if the
+ * resource data model is also a Node then the modified flag is automatically
  * managed by the Node logic.
  */
 @CustomLog

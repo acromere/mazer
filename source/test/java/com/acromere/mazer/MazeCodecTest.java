@@ -14,7 +14,7 @@ import static org.assertj.core.api.Fail.fail;
 
 public class MazeCodecTest extends BaseMazerTest {
 
-	private MazeResourceType assetType;
+	private MazeResourceType resourceType;
 
 	private Maze maze;
 
@@ -23,8 +23,8 @@ public class MazeCodecTest extends BaseMazerTest {
 	@BeforeEach
 	void setup() {
 		Path path = Paths.get( "target", "maze.txt" );
-		assetType = new MazeResourceType( mazer );
-		resource = new Resource( assetType, path.toUri() );
+		resourceType = new MazeResourceType( mazer );
+		resource = new Resource( resourceType, path.toUri() );
 		maze = new Maze();
 	}
 
@@ -37,7 +37,7 @@ public class MazeCodecTest extends BaseMazerTest {
 		maze.setStartDirection( Direction.NORTH );
 		resource.setModel( maze );
 		ByteArrayOutputStream output = new ByteArrayOutputStream();
-		assetType.getDefaultCodec().save( resource, output );
+		resourceType.getDefaultCodec().save( resource, output );
 
 		String content = new String( output.toByteArray(), StandardCharsets.UTF_8 );
 
@@ -62,7 +62,7 @@ public class MazeCodecTest extends BaseMazerTest {
 		String content = builder.toString();
 
 		InputStream input = new ByteArrayInputStream( content.getBytes( StandardCharsets.UTF_8 ) );
-		assetType.getDefaultCodec().load( resource, input );
+		resourceType.getDefaultCodec().load( resource, input );
 		maze = resource.getModel();
 
 		// Check the maze configuration
@@ -101,7 +101,7 @@ public class MazeCodecTest extends BaseMazerTest {
 
 		InputStream input = new ByteArrayInputStream( content.getBytes( StandardCharsets.UTF_8 ) );
 		try {
-			assetType.getDefaultCodec().load( resource, input );
+			resourceType.getDefaultCodec().load( resource, input );
 			maze = resource.getModel();
 			fail( "Load should throw IOException but did not" );
 		} catch( IOException exception ) {

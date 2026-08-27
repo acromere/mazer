@@ -27,7 +27,9 @@ public class Mazer extends Module {
 	public void register() {}
 
 	/**
-	 * Called when the mod is started. It is common to register custom icons, actions, asset types, tools and long running items like timers, tasks and other threads in this method.
+	 * Called when the mod is started. It is common to register custom icons,
+	 * actions, resource types, tools, and long-running items like timers, tasks,
+	 * and other threads in this method.
 	 */
 	@Override
 	public void startup() {
@@ -41,7 +43,7 @@ public class Mazer extends Module {
 	}
 
 	/**
-	 * Called when the mod should shut down. It is common to unregister custom icons, actions, asset types, tools and long running items like timers, tasks and other threads in this method.
+	 * Called when the mod should shut down. It is common to unregister custom icons, actions, resource types, tools and long running items like timers, tasks and other threads in this method.
 	 */
 	@Override
 	public void shutdown() {
