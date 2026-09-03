@@ -1,6 +1,6 @@
 package com.acromere.mazer;
 
-import com.acromere.data.Node;
+import com.acromere.data.DataNode;
 import com.acromere.transaction.Txn;
 import com.acromere.transaction.TxnEvent;
 import com.acromere.transaction.TxnException;
@@ -8,14 +8,14 @@ import lombok.CustomLog;
 
 /**
  * The Maze class is the data model used for the Maze resource type, resource and
- * tool. It subclasses {@link Node} to utilize the
+ * tool. It subclasses {@link DataNode} to utilize the
  * functionality provided in Node that simplifies the management of attributes,
  * data structure and the modified flag. Since all resources are also Nodes, if the
  * resource data model is also a Node then the modified flag is automatically
  * managed by the Node logic.
  */
 @CustomLog
-public class Maze extends Node {
+public class Maze extends DataNode {
 
 	private static final int UNVISITED = 0;
 
