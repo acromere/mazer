@@ -1,6 +1,6 @@
 package com.acromere.mazer;
 
-import com.acromere.data.NodeEvent;
+import com.acromere.data.DataNodeEvent;
 import com.acromere.event.EventHandler;
 import com.acromere.product.Rb;
 import com.acromere.skill.RunPauseResettable;
@@ -68,7 +68,7 @@ public class MazeTool extends ProgramTool implements RunPauseResettable {
 
 	private Cell[][] cells;
 
-	private final EventHandler<NodeEvent> modelChangeHandler;
+	private final EventHandler<DataNodeEvent> modelChangeHandler;
 
 	static {
 		backgrounds = new HashMap<>();
@@ -176,7 +176,7 @@ public class MazeTool extends ProgramTool implements RunPauseResettable {
 		setTitle( getResource().getName() );
 		setGraphic( getProgram().getIconLibrary().getIcon( "mazer" ) );
 
-		getMaze().register( NodeEvent.NODE_CHANGED, modelChangeHandler );
+		getMaze().register( DataNodeEvent.NODE_CHANGED, modelChangeHandler );
 	}
 
 	@Override
@@ -211,7 +211,7 @@ public class MazeTool extends ProgramTool implements RunPauseResettable {
 
 	@Override
 	protected void deallocate() {
-		getMaze().unregister( NodeEvent.NODE_CHANGED, modelChangeHandler );
+		getMaze().unregister( DataNodeEvent.NODE_CHANGED, modelChangeHandler );
 
 		MazeSolver solver = getSolver();
 		if( solver != null ) solver.stop();
